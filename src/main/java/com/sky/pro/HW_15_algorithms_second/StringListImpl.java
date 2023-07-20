@@ -1,14 +1,24 @@
 package com.sky.pro.HW_15_algorithms_second;
 
+
 import java.util.Arrays;
+
 public class StringListImpl implements StringList {
-        private final String[] storage;
+
+    private final String[] storage;
+
         private int size;
+
         public StringListImpl() {
+
             storage = new String[10];
+
         }
+
         public StringListImpl(int initSize) {
+
             storage = new String[initSize];
+
         }
         @Override
 
@@ -142,46 +152,73 @@ public class StringListImpl implements StringList {
             return indexOf(item)!=-1;
         }
 
+
         @Override
-
-
         public boolean contains2(int[] arr, int item) {
+
             for (int i : arr) {
+
                 if (i == item) {
+
                     return true;
+
                 }
+
             }
+
 
             return false;
         }
+
 
 
         public boolean contains(int[] arr, int item) {
 
-
             int min = 0;
+
             int max = arr.length - 1;
+
             while (min <= max) {
+
                 int mid = (min + max) / 2;
+
                 if (item == arr[mid]) {
+
                     return true;
+
                 }
+
                 if (item < arr[mid]) {
+
                     max = mid - 1;
+
                 } else {
+
+
                     min = mid + 1;
+
                 }
             }
+
             return false;
         }
+
         public  void sortInsertion(int[] arr) {
+
             for (int i = 1; i < arr.length; i++) {
+
                 int temp = arr[i];
+
                 int j = i;
+
                 while (j > 0 && arr[j - 1] >= temp) {
+
                     arr[j] = arr[j - 1];
+
                     j--;
+
                 }
+
                 arr[j] = temp;
             }
         }
@@ -249,8 +286,7 @@ public class StringListImpl implements StringList {
             }
         }
 
-        private void sort(int []arr) {
-        }
+
 
     }
 
