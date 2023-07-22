@@ -1,5 +1,10 @@
-package com.sky.pro.HW_15_algorithms_second;
+package com.sky.pro.HW_15_algorithms_second.one;
 
+
+import com.sky.pro.HW_15_algorithms_second.IndexValueIsInvalidException;
+import com.sky.pro.HW_15_algorithms_second.ItemNotFoundException;
+import com.sky.pro.HW_15_algorithms_second.NoFreeCellsArrayIsFullException;
+import com.sky.pro.HW_15_algorithms_second.NullItemException;
 
 import java.util.Arrays;
 
@@ -274,7 +279,7 @@ public class StringListImpl implements StringList {
 
             if(size==storage.length){
 
-                throw new  NoFreeCellsArrayIsFullException();
+                throw new NoFreeCellsArrayIsFullException();
             }
         }
 

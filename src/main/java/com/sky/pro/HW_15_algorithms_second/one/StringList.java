@@ -1,4 +1,4 @@
-package com.sky.pro.HW_15_algorithms_second;
+package com.sky.pro.HW_15_algorithms_second.one;
 
 public interface StringList {
     String add1(String item);
